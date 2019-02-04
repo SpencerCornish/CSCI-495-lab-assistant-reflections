@@ -8,7 +8,7 @@ sun = today - timedelta(7+idx)
 filePath = "md/{:%m-%d-%Y}.md".format(sun)
 
 if os.path.isfile(filePath):
-    print("ERROR: File already exists! ")
+    print("ERROR: File already exists! " + filePath)
     sys.exit(1)
 
 templateFile = open("md/TEMPLATE.md", "r")
